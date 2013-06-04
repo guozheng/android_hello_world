@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MyActivity extends Activity {
 	List<String> names;
@@ -42,12 +43,14 @@ public class MyActivity extends Activity {
 		EditText editTextName = (EditText)findViewById(R.id.editTextName);
 		adapter.add(editTextName.getText().toString());
 		editTextName.setText("");
-//		adapter.notifyDataSetChanged();
+		adapter.notifyDataSetChanged();
+		Toast.makeText(getBaseContext(), "Success!", Toast.LENGTH_SHORT).show();
 	}
 	
 	public void reset(View v) {
 		adapter.clear();
 		adapter.notifyDataSetChanged();
+		Toast.makeText(getBaseContext(), "Success!", Toast.LENGTH_SHORT).show();
 	}
 
 }
