@@ -1,11 +1,11 @@
 package codepath.demos.helloworlddemo;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -51,6 +51,16 @@ public class MyActivity extends Activity {
 		adapter.clear();
 		adapter.notifyDataSetChanged();
 		Toast.makeText(getBaseContext(), "Success!", Toast.LENGTH_SHORT).show();
+	}
+	
+	
+	/**
+	 * Go to hello world activity
+	 */
+	public void next(View v) {
+		Intent goNext = new Intent(MyActivity.this, HelloWorldActivity.class);
+		goNext.putExtra("users", new Users(names));
+		startActivity(goNext);
 	}
 
 }

@@ -12,5 +12,14 @@
     <string name="add_name_hint">Click to add name</string>
     <string name="reset_names">Reset</string>
     <string name="reset_names_hint">Click to clear all names</string>
+    <string name="next">Next</string>
+    <string name="next_hint">Click to go to next screen</string>
+    <string name="prev">Prev</string>
+    <string name="prev_hint">Click to go to previous screen</string>
+    <string name="say_hi">Hi!</string>
+    <string name="phone_number">Enter phone number</string>
+    <string name="url">Enter URL</string>
+    <string name="call">Call</string>
+    <string name="browse">Browse</string>
 
 </resources>
